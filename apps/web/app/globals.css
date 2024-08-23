@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-slate {
+  background-color: #292929;
+}
+
+.bg-logoblue {
+  background-color: #1649ff;
+}
+
+.bg-offwhite {
+  background-color: #efefef;
+}
+
+.btn {
+  @apply rounded-lg px-4 py-2 font-medium text-white transition-transform duration-200 ease-in-out hover:scale-105 hover:ring-2 hover:ring-slate-300;
+  background-color: #292929;
+}
