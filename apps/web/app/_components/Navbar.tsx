@@ -1,3 +1,5 @@
+"use client";
+import { signIn } from "@/auth";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,7 +15,20 @@ export default function Navbar() {
           priority={true}
         />
       </Link>
-      <button className="btn">Login</button>
+      {/* <form
+        onSubmit={async (e) => {
+          // "use server";
+          e.preventDefault();
+          await signIn("credentials", { redirectTo: "/dashboard" });
+        }}
+      > */}
+      <button
+        className="btn"
+        onClick={() => signIn("credentials", { redirectTo: "/dashboard" })}
+      >
+        Login
+      </button>
+      {/* </form> */}
     </nav>
   );
 }
